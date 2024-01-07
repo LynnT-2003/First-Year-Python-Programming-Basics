@@ -1,0 +1,3 @@
+import testmain
+testmain.run()
+

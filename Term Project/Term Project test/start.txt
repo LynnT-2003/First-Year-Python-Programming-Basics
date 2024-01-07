@@ -1,0 +1,38 @@
+import ReadWriteModule
+
+def addrow():
+    data.append([])
+
+def addelement(row,ele):
+    data[row].append(ele)
+
+def addrecord(n):
+    addrow()
+    for i in range (n):
+        addelement(len(data)-1,input(f"Enter element{i+1}: "))
+
+data = ReadWriteModule.readFile("test")
+print (data)
+print(len(data))
+
+addrecord(int(input("Enter number of elemnts to add in the new record: ")))
+
+print (f"\nExpected outcome in csv: {data}\n") #havent used write module
+
+
+'''
+ReadWriteModule.write("test",data)
+print ("Outcome in csv file: ", end = '\n')
+print(ReadWriteModule.readFile("test"))
+
+
+print(data)
+print(len(data))
+print(data)'''
+
+'''
+data[len(data)-1].append(10)
+data[len(data)-1].append(20)
+print(data)
+print(len(data))
+'''
